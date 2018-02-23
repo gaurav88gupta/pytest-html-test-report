@@ -30,7 +30,7 @@ init: tools
 	cd src && \
 	virtualenv . --always-copy --python=python3 && \
 	source ./bin/activate && \
-	pip3 install -U pytest
+	pip install -U pytest
 
 activate:
 	source src/bin/activate
@@ -53,4 +53,4 @@ query-data: activate
 all: init preprocess-data create-db create-tables ingest-data
 
 functional:
-	python3 -m pytest --html=report.html
+	pytest --html=report.html
