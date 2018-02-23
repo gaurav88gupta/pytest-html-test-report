@@ -30,7 +30,7 @@ init: tools
 	cd src && \
 	virtualenv . --always-copy --python=python3 && \
 	source ./bin/activate && \
-	pip3 install --no-cache-dir -r ../requirements.txt
+	pip3 install -U pytest
 
 activate:
 	source src/bin/activate
