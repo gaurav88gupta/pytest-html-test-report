@@ -6,7 +6,7 @@ YELLOW := \033[1;33m
 NC     := \033[0m # No Color
 
 PATH       := ${PATH}:${HOME}/.local/bin
-PYTHONPATH := .:src/penv/lib/python3.6/site-package
+PYTHONPATH := .:src/lib/python3.6/site-package
 
 usage:
 	  @printf "${YELLOW}make tools             ${GREEN}# Setup virtualenv.${NC}\n"
@@ -21,22 +21,19 @@ usage:
 		@printf "${YELLOW}make functional        ${GREEN}# Run functional tests${NC}\n"
 		@printf "\n"
 
-.PHONY: clean
-clean:
-	rm -rf src/penv
 
 tools:
 	pip3 install pythonenv virtualenv
 
 init: tools
-	mkdir -p src/penv && \
-	cd src/penv && \
+	mkdir -p src && \
+	cd src && \
 	virtualenv . --always-copy --python=python3 && \
 	source ./bin/activate && \
 	pip3 install --no-cache-dir -r ../requirements.txt
 
 activate:
-	source src/penv/bin/activate
+	source src/bin/activate
 
 preprocess-data: activate
 	python3 -m src.preprocess_data
