@@ -9,6 +9,7 @@ phases:
     commands:
       - env
       - echo Build started on `date`
+      - make init
       - make functional
 artifacts:
   files:
