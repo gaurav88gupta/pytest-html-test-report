@@ -52,5 +52,5 @@ query-data: activate
 
 all: init preprocess-data create-db create-tables ingest-data
 
-functional: activate
+functional:
 	pytest --html=report.html
