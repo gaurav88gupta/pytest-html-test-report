@@ -57,4 +57,4 @@ query-data: activate
 all: init preprocess-data create-db create-tables ingest-data
 
 functional: 
-	source src/penv/bin/activate && pytest
+	source src/penv/bin/activate && pytest --html=report.html
