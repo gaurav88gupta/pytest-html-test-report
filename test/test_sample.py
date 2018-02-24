@@ -1,4 +1,4 @@
-from .sample_code import Sample
+import Sample
 
 def test_answer():
     s = Sample()
