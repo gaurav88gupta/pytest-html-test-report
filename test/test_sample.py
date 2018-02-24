@@ -1,4 +1,4 @@
-from src.sample_code import Sample
+from .sample_code import Sample
 
 def test_answer():
     s = Sample()
