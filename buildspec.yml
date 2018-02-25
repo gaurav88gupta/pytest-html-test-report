@@ -5,7 +5,7 @@ env:
     REVISION_ID: ${CODEBUILD_RESOLVED_SOURCE_VERSION}
 
 phases:
-  pre_build:
+  build:
     commands:
       - env
       - echo Build started on `date`
@@ -13,4 +13,4 @@ phases:
       - make functional
 artifacts:
   files:
-    - 'MyAppBuild/report.html'
+    - '*/report.html'
