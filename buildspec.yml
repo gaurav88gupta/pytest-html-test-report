@@ -13,4 +13,4 @@ phases:
       - make functional
 artifacts:
   files:
-    - '**/*'
+    - 'MyAppBuild/report.html'
