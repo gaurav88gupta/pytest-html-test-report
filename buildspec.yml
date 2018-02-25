@@ -13,4 +13,4 @@ phases:
       - make functional
 artifacts:
   files:
-    - '*/report.html'
+    - '**/report.html'
