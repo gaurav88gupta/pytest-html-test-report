@@ -11,6 +11,7 @@ phases:
       - echo Build started on `date`
       - make init
       - make functional
+      - aws s3 cp ./report.html s3://gaurav-pytest-html-test-report/  
 artifacts:
   files:
     - '**/*'
